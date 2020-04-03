@@ -4,9 +4,9 @@ const FILES_TO_CACHE = [
   `/manifest.webmanifest`,
   `/assets/img/piggy-bank-96x96.png`,
   `/assets/img/piggy-bank-192x192.png`,
-  `/index.js`,
-  `/db.js`,
-  `/style.css`
+  `/assets/js/index.js`,
+  `/assets/js/db.js`,
+  `/assets/css/style.css`
 ];
 
 const CACHE_NAME = `static-cache-v2`;
