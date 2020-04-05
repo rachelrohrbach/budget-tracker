@@ -10,7 +10,7 @@
 ## General Information
 The Budget Tracker application allows a user to add expenses and deposits to their budget with or without a connection. When entering transactions offline, the application will populate the total when brought back online.
 
-The application can be run locally by first running the following command in the terminal to install the dependencies required:
+The application can be run locally by running following command in the terminal to install the dependencies required:
 ```sh
 npm install
 ```
