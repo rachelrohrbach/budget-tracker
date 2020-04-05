@@ -24,7 +24,7 @@ node server.js
 ## Technologies
 The goal of this project was to take a fully functional application that was already built and to make it into a Progressive Web Application (PWA) which offers some great benefits like working in any browser, being responsive to any screen size, availability offline, and the ability to install it to a device homescreen.  To make it into a PWA I had to add a web manifest and a service worker. 
 
-The Web Manifest is a document that sits at the root of the public directory and provides meta-data about the app in a JSON text file.
+The web manifest is a document that sits at the root of the public directory and provides meta-data about the app in a JSON text file.
 ```sh
 {
     "short_name": "Budget Tracker",
@@ -51,7 +51,7 @@ The manifest.webmanifest file is referenced in the ```<Head>``` of the index.htm
 ```sh
 <link rel="manifest" href="manifest.webmanifest">
 ```  
-The Service Worker is a proxy, so if the user is offline the Service Worker can access the cache to return data.   To use the Service Worker it must first be registered in the public directory.  The Service Worker needs to be a the root of the domain so that the entire site will be in scope, so since this is just a one page application I registered the Service Worker by adding the code below to the index.html file before the closing ```</body>``` tag:
+The service worker is a proxy, so if the user is offline the service worker can access the cache to still return data to the user.   To use the service worker it must first be registered in the public directory.  The service worker needs to be a the root of the domain so that the entire site will be in scope, so since this is just a one page application I registered the service worker by adding the code below to the index.html file before the closing ```</body>``` tag:
 ```sh
     <script>
       if ('serviceWorker' in navigator) {
@@ -63,7 +63,7 @@ The Service Worker is a proxy, so if the user is offline the Service Worker can 
       }
     </script>
 ```
-The service-worker.js file also sits at the root of the public directory of the application and handles the caching of the public files, the installation, activation and fetch events.  
+The service-worker.js file also sits at the root of the public directory of the application and handles the caching of the public files, the installation, activation and fetch events.  One other thing to note in regards to service workers is that they require an HTTPS setup on the server. It works fine on localhost without this, but when deployed it does need to have HTTPS certification which in this case is being handled by Heroku.  
 
 
 ## Demo
