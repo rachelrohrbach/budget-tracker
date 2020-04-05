@@ -22,7 +22,7 @@ node server.js
 ```
 
 ## Technologies
-This project was to take a fully functional application that was already built and to make it into a Progressive Web Application (PWA) which offers some great benefits like working in any browser, being responsive to any screen size, availability offline, and the ability to install it to a device homescreen.  To make it into a PWA I had to add a web manifest and a service worker. 
+The goal of this project was to take a fully functional application that was already built and to make it into a Progressive Web Application (PWA) which offers some great benefits like working in any browser, being responsive to any screen size, availability offline, and the ability to install it to a device homescreen.  To make it into a PWA I had to add a web manifest and a service worker. 
 
 The Web Manifest is a document that sits at the root of the public directory and provides meta-data about the app in a JSON text file.
 ```sh
